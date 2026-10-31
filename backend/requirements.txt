@@ -22,3 +22,5 @@ APScheduler==3.11.3
 requests==2.31.0
 beautifulsoup4==4.13.5
 pillow==12.1.0
+
+gunicorn==22.0.0

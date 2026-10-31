@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ChatWindow from '../components/chat/ChatWindow';
 
-const API_BASE_URL = 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([]);
@@ -49,7 +49,7 @@ const ChatPage = () => {
         const updated = [...prev];
         updated[updated.length - 1] = {
           ...updated[updated.length - 1],
-          answer: "⚠️ Could not connect to the server. Please check if the backend is running on port 8000.",
+          answer: "âš ï¸ Could not connect to the server. Please check if the backend is running on port 8000.",
           source: "Error"
         };
         return updated;
